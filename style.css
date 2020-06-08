@@ -1,0 +1,96 @@
+html{
+  	font-family: Arial, Helvetica, sans-serif;
+	background-color:gainsboro;
+	width:100%;
+	overflow-y: scroll;
+}
+.sidebar {
+  	margin: 0;
+  	padding: 0;
+  	width: 200px;
+  	background-color: #f1f1f1;
+  	position: fixed;
+  	height: 100%;
+  	overflow: auto;
+}
+.sidebar a {
+  	display: block;
+  	color: black;
+  	padding: 16px;
+  	text-decoration: none;
+}
+.sidebar a.active {
+  	background-color: #4CAF50;
+  	color: white;
+}
+.sidebar a:hover{
+  	background-color: #555;
+  	color: white;
+}
+div.content {
+  	margin-left: 200px;
+  	padding: 3em 0 0 0;
+  	height: 1000px;
+}
+header{
+	background-color:#7B68EE;
+	display:flex;
+	height:2.5em;
+	justify-content:space-between;
+	padding:.25em 1em .25em 1em;
+	width:99%;
+}
+header div{
+	padding-top:.5em;
+}
+header #backforth{
+	padding-left:1em;
+}
+input{
+	text-align: center;
+}
+#vertStack{
+	background-color: gainsboro;
+	margin: 0;
+}
+#vertStack li{
+	display: inline;
+	list-style:none;
+	padding-left:1em;
+}
+#vertStack a{
+	text-decoration: none;
+	color:black;
+}
+#vertStack h2{
+	margin-left: 1em;
+}
+.content{
+	margin: 0;
+}
+#wikiContent{
+	margin:2em;
+	background:whitesmoke;
+	padding:2em;
+}
+#wikiContent li{
+	display: inline;
+	padding-left:1em;
+	list-style:none;
+}
+#fixedCont{
+	position:fixed;
+	width:100%;
+	margin-left: -8px;
+}
+#topMargin{
+	position:fixed;
+	background-color:gainsboro;
+	width:100%;
+	height:.5em;
+	margin: -.5em;
+}
+.anchor{
+	padding-top: 60px;
+    margin-top: -60px;
+}

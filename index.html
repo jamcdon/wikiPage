@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - wikiPage</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id = 'topMargin'></div>
+<div id = 'fixedCont'>
+<header>
+	<div id = "backForth">
+		<i class="fas fa-chevron-left"></i>
+		<i class="fas fa-chevron-right"></i>
+	</div>
+	<div class = 'searchBox'>
+		<input placeholder="Search or type a command" size="96"/>
+	</div>
+	<div class = 'windowOptions'>
+		<i class="fas fa-window-minimize"></i>
+		<i class="far fa-window-maximize"></i>
+		<i class="fas fa-window-close"></i>
+	</div>
+</header>
+
+<div class='sidebar'>
+	<a href ='#Flask'><i class="fas fa-flask"></i> Flask</a>
+	<a href ='#SQLAlchemy'><i class="fab fa-gg-circle"></i> SQLAlchemy</a>
+	<a href ='#FastAPI'><i class="fas fa-fast-forward"></i> FastAPI</a>
+	<a href ='#Pip'><i class="fas fa-box"></i> Pip</a>
+	<a href ='#Uvicorn'><i class="fas fa-horse-head"></i> Uvicorn</a>
+</div>
+</div>
+<div class = 'content'>
+	<div id='vertStack'>
+		<h2>Digital Capability > Coding Technologies > Python</h2>
+		<nav>
+			<ul>
+				<li><a href =''>Conversations</a></li>
+				<li><a href =''>Files</a></li>
+				<li><a href =''>Wiki</a></li>
+				<li><a href =''><i class="far fa-plus-square"></i></a></li>
+			</ul>
+		</nav>
+	</div>
+	<hr>
+	<div id='wikiContent'>
+		<div class = "side">
+		</div>
+		<div v-for="entry in entries" v-bind:id='entry.name' class = 'anchor'>
+			<h3>{{entry.name}}</h3>
+			<p v-for='para in entry.paras'>{{para}}</p>
+			<div v-for='example in entry.code'>
+				<h5>Example: {{example.name}}</h5>
+				<pre><code>{{example.code}}</code></pre>
+			</div>	
+			<ul>
+				<li v-for='link in entry.sources'>
+					<a v-bind:href="link.link" target="_blank">{{link.name}}</a>
+				</li>
+			</ul>
+			<hr>
+		</div>
+	</div>
+</div>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/vue@2.6.11'></script><script  src="./script.js"></script>
+
+</body>
+</html>
